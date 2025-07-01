@@ -2,12 +2,18 @@ import java.util.Objects;
 
 public class Book {
     private String name;
-    private String author;
-    int year;
+    private Author author; //private String author    в этом случае работает закомменртированный код
+    private int year;
+
+    //public Book(String name, Author author, int year) {
+      //  this.name = name;
+        //this.author = String.valueOf(author);
+      //  this.year = year;
+    //}
 
     public Book(String name, Author author, int year) {
         this.name = name;
-        this.author = String.valueOf(author);
+        this.author = author;
         this.year = year;
     }
 
@@ -15,9 +21,12 @@ public class Book {
         return name;
     }
 
-    private String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
+//private String getAuthor() {
+     //   return author;
+    //}
 
     public int getYear() {
         return year;
